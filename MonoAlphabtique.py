@@ -15,14 +15,14 @@ def monoAlphabetique():
     lett = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     for char in lett:  
         a = input("Entrez le remplacant de " + char + " : ").upper()
-        if (len(a)==1 and ord(a) in range(65,91)) and a not in used:
-            code[char] = a
-            used.append(a)
-        else:
-            while(len(a) !=1 or ord(a) not in range(65,91) or a in used):
-                a = input("NOT INSERT! Reentrez le remplacant de " + char + " : ").upper()
-            code[char] = a
-            used.append(a)
+        #if (len(a)==1 and ord(a) in range(65,91)) and a not in used:
+            #code[char] = a
+            #used.append(a)
+        #else:
+        while(len(a) !=1 or ord(a) not in range(65,91) or a in used):
+            a = input("NOT INSERT! Reentrez le remplacant de " + char + " : ").upper()
+        code[char] = a
+        used.append(a)
     print("\n*****  insertion terminee  *****\n")      
     print("\nLe texte chiffre est : ", remplaceur(code,input("Entrez le text a crypter : ").upper()))
     choix = input("\nVoulez vous chiffrer un autre texte?\nY/N : ").upper()
